@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FUUD</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">Splash Activity</string>
+    <string name="title_activity_main">FUUD</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="title_activity_saved_recipes">Saved Recipes</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="error_cannot_connect">Uh-oh, looks like there is something wrong with this recipe.  Try opening it in your browser.</string>
+</resources>
