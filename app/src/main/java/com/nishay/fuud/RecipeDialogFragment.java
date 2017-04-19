@@ -162,13 +162,21 @@ public class RecipeDialogFragment extends DialogFragment {
             }
             toPrint.add(tohtmlList(ingredients, "INGREDIENTS"));
 
-            p = Pattern.compile("<h3>Directions</h3>([\\W\\S]*?)</div>", Pattern.DOTALL);
+            //fixed food.com instructions regex
+            p = Pattern.compile("<h3>Directions[\\W\\S]*?(<li>[\\W\\S]*</li>)[\\W\\S]*?<div class=\"recipe-tools\">", Pattern.DOTALL);
             m = p.matcher(html);
             while(m.find()) {
-                instructions.add(m.group(1));
+                //needs further regex
+                Pattern p2 = Pattern.compile("<li>(.*?)</li>");
+                Matcher m2 = p2.matcher(m.group(1));
+                while(m2.find()) {
+                    instructions.add(m2.group(1));
+                }
             }
-            toPrint.add(tohtmlList(instructions, "INSTRUCTIONS"));
+
         }
+            toPrint.add(tohtmlList(instructions, "INSTRUCTIONS"));
+
 
         return toPrint;
     }
